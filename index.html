@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+</head>
+
+<body>
+    <h1>Thực hiện phép cộng</h1>
+    <main>
+        <div class="sum">
+            <div class="form-info column-half">
+                <p class="form-info-text">Toán hạng thứ nhất:</p>
+                <p class="form-info-text">Toán hạng thứ hai:</p>
+                <p class="text-result">Kết quả:</p>
+            </div>
+            <div class="form-sum column-half">
+                <div class="form">
+                    <input type="text" name="" required id="box-operand1" class="form-input"
+                        placeholder="Nhập toán hạng 1">
+                    <input type="text" name="" required id="box-operand2" class="form-input"
+                        placeholder="Nhập toán hạng 2">
+                    <input id="btn-sum" class="form-submit-btn form-input" type="submit" value="Cộng">
+                    <input type="text" disabled name="" id="box-result" class="form-input form-result">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .column-half {
+            font-weight: 900;
+            padding: 16px;
+            margin: 16px 16px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 36px 0;
+        }
+
+        .sum {
+            display: flex;
+            margin: 0px 64px;
+            width: 50%;
+        }
+
+        .form-info {
+            /* flex: 1; */
+            line-height: 4px;
+        }
+
+        .form-sum {
+            display: flex;
+            flex: 1;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .form .form-input {
+            padding: 4px;
+            margin: 4px;
+        }
+
+        .form-submit-btn {
+            width: 50%;
+            align-self: end;
+        }
+
+        .form-submit-btn:hover {
+            cursor: pointer;
+        }
+
+        .form-info-text {
+            padding: 8px;
+            margin: 8px 0px;
+        }
+
+        .text-result {
+            padding: 8px;
+            margin: 54px 0px;
+        }
+    </style>
+
+    <script>
+
+        var btnSum = document.getElementById('btn-sum');
+        btnSum.onclick = function () {
+            var operand1 = document.getElementById('box-operand1').value;
+            var operand2 = document.getElementById('box-operand2').value;
+            var sum = parseInt(operand1) + parseInt(operand2);
+            document.getElementById('box-result').value = sum.toString();
+        }
+
+    </script>
+
+</body>
+
+
+</html>
